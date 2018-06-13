@@ -1,0 +1,149 @@
+body
+  font-family: 'Nunito Sans', sans-serif
+  background: #ffffff
+  h1,h2,h3
+    font-family: 'Teko', sans-serif
+#app
+  margin-top: 64px
+  .overlay
+    position: relative
+    &::before
+      position: absolute
+      content: " "
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: block
+      z-index: -10
+  .blue-bg
+    &::before
+      background: rgb(14,100,108)
+      background: -moz-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
+      background: -webkit-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
+      background: linear-gradient(135deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#194957',endColorstr='#162f3f',GradientType=1)
+  #hero
+    background-image: url(/../img/test.jpg)
+  #about
+    background-image: url(/../img/books.jpg)
+  .portion
+    background-position: 0px 0px
+    background-attachment: fixed
+    background-size: cover
+    min-height: calc(100vh - 64px)
+    &.two
+      background-image: url(/../img/test3.jpeg)
+      background-color: #202020
+      background-repeat: no-repeat
+    &.three
+      background-image: url(/../img/test4.jpg)
+    h2
+      font-family: 'Fredericka the Great', cursive
+      user-select: none
+      font-size: 4em
+      padding: .5em 1em
+      margin: 0
+      text-align: left
+      position: absolute
+      bottom: 0
+      width: 100%
+  .info
+    color: $text-color
+    padding: 4em 25%
+    &.inverted
+      color: #000
+      background: #fff
+  .button
+    text-align: center
+    a
+      display: inline-block
+      border: 2px solid $brand-primary
+      padding: .75em 1.5em
+      color: $brand-primary
+      text-decoration: none
+      text-transform: uppercase
+      border-radius: 5px
+      letter-spacing: .2em
+      word-spacing: .25em
+      font-weight: bold
+      transition: all 0.4s ease-in-out
+      &:hover
+        color: $brand-primary
+        background: #edd553
+  footer.footer
+    color: $text-color
+    background: #244058
+    padding: 8px 0
+    text-align: center
+  #toTop img
+    width: 50px
+    &:hover
+      cursor: pointer
+  nav img
+    z-index: 1000
+    height: 2.5em
+    position: absolute
+    left: 40px
+    top: 10px
+    transition: all 0.5s linear
+  .move
+    top: -60px
+  nav span
+    position: absolute
+    right: 20px
+    top: 10px
+    font-weight: bold
+    transition: all 0.5s ease-in
+  .movetext
+    top: -30px
+.nav-item
+  a
+    color: #edd553 !important
+.form-control:focus
+    background-color: transparent
+    border-color: #80bdff
+//video
+.homepage-hero-module
+  border-right: none
+  border-left: none
+  position: relative
+
+.no-video .video-container video, .touch .video-container video
+  display: none
+
+.no-video .video-container .poster, .touch .video-container .poster
+  display: block !important
+
+.video-container
+  .hidden
+    display: none
+  position: relative
+  bottom: 0%
+  left: 0%
+  height: 100%
+  width: 100%
+  overflow: hidden
+  background: #000
+  .poster img
+    width: 100%
+    bottom: 0
+    position: absolute
+  .filter
+    z-index: 10
+    position: absolute
+    background: rgba(0, 0, 0, 0.4)
+    width: 100%
+    height: 100%
+  video
+    position: absolute
+    z-index: 0
+    bottom: 0
+    &.fillWidth
+      width: 100%
+
+@media(max-width: 600px)
+  #app
+    margin-top: 56px
+    .portion
+      background-position: -250px 0px
