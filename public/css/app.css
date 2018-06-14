@@ -10413,7 +10413,6 @@ a.text-dark:focus {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  background: #202020;
 }
 
 body h1,
@@ -10422,19 +10421,58 @@ body h3 {
   font-family: 'Teko', sans-serif;
 }
 
+body nav.navbar,
+body .navbar-brand {
+  font-family: 'Teko';
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+body nav.navbar li:hover a {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  color: #fff !important;
+}
+
+body nav.navbar:hover {
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+  -webkit-box-shadow: 0 0 40px #55f3e8;
+          box-shadow: 0 0 40px #55f3e8;
+}
+
+#app h2#hero-text {
+  font-family: 'Fredericka the Great', cursive;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 4em;
+  padding: .5em 1em;
+  margin: 0;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 #app .info {
   color: #ffffff;
   padding: 4em 25%;
   text-align: center;
 }
 
+#app .info.inverted {
+  color: #000;
+  background: #fff;
+}
+
 #app .info h3 {
   font-size: 4em;
 }
 
-#app .info.inverted {
-  color: #000;
-  background: #fff;
+#app .info p {
+  margin: 30px 0;
 }
 
 #app .overlay {
@@ -10447,14 +10485,14 @@ body h3 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 1px);
   display: block;
   z-index: -10;
 }
 
-#app .blue-bg::before {
-  background: #0e646c;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(95, 79, 0, 0.8) 66%);
+#app .overlay-bg::before {
+  background: black;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.98) 66%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#194957',endColorstr='#162f3f',GradientType=1);
 }
 
@@ -10464,10 +10502,15 @@ body h3 {
 }
 
 #app #about {
-  background-image: url(/../img/coffee.jpg);
+  background-image: url(/../img/journey.jpg);
   background-size: cover;
   background-attachment: fixed;
   z-index: 1;
+}
+
+#app #about p {
+  max-width: 400px;
+  margin: auto;
 }
 
 #app .portion {
@@ -10483,29 +10526,17 @@ body h3 {
   background-image: url(/../img/test3.jpeg);
   background-color: #202020;
   background-repeat: no-repeat;
+  margin-top: -3px;
 }
 
 #app .portion.three {
   background-image: url(/../img/test4.jpg);
-}
-
-#app .portion h2 {
-  font-family: 'Fredericka the Great', cursive;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  font-size: 4em;
-  padding: .5em 1em;
-  margin: 0;
-  text-align: left;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  height: 500px;
 }
 
 #app .button {
   text-align: center;
+  margin-top: 30px;
 }
 
 #app .button a {
@@ -10528,33 +10559,45 @@ body h3 {
   background: #edd553;
 }
 
+#app #contact form {
+  padding: 50px 0;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-right: 3em;
+}
+
+#app #contact form h2 {
+  font-size: 4em;
+}
+
+#app #contact form input {
+  padding: 0;
+}
+
+#app #contact form input[type=text]:focus:not([readonly]) + label,
+#app #contact form textarea.md-textarea:focus:not([readonly]) + label {
+  color: #cdb94b;
+}
+
+#app #contact form input[type=text]:focus:not([readonly]),
+#app #contact form textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #cdb94b;
+  -webkit-box-shadow: 0 0px 0 0 #cdb94b;
+          box-shadow: 0 0px 0 0 #cdb94b;
+}
+
 #app footer.footer {
   color: #ffffff;
   background: #244058;
   padding: 8px 0;
   text-align: center;
-}
-
-#app #toTop img {
-  width: 50px;
-}
-
-#app #toTop img:hover {
-  cursor: pointer;
-}
-
-#app nav img {
-  z-index: 1000;
-  height: 2.5em;
-  position: absolute;
-  left: 40px;
-  top: 10px;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-}
-
-#app .move {
-  top: -60px;
 }
 
 #app nav span {
@@ -10618,7 +10661,7 @@ body h3 {
 .video-container .filter {
   z-index: 10;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
 }

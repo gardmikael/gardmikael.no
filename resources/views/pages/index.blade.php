@@ -4,36 +4,37 @@
   <div id="hero" class="portion">
     <h2 id="hero-text">GARDMIKAEL.NO</h2>
   </div>
-  <section id="about" class="info overlay blue-bg">
-    <h3>I am <span
+  <section id="about" class="info overlay overlay-bg">
+    <h3>Jeg <span
      class="txt-rotate"
      data-period="1000"
-     data-rotate='[ "a designer.", "a coder", "creative", "waiting", "fun!" ]'></span></h3>
-    <p class="thinner">I am a thirty year old freelance web developer from Trondheim, Norway. I like to create original, responsive & beautiful conent for the web. Need help transforming your idea into something real? </p>
+     data-rotate='[ "...", "heter Gard", "har hode for kode", "er kreativ", "vil lage hjemmesiden din" ]'></span></h3>
+    <!-- <p class="thinner">I am a thirty year old freelance web developer from Trondheim, Norway. I like to create original, responsive & beautiful conent for the web. Need help transforming your idea into something real? </p> -->
+    <p class="thinner">Jeg er en tredve år gammel freelance webutvikler fra Trondheim. Jeg liker å lage orginalt, stilrent og responsivt innhold for nett. Trenger du hjelp til ditt neste prosjekt?</p>
     <div class="button">
-      <a href="#">Get in touch</a>
+      <a href="#contact">Ta kontakt</a>
     </div>
   </section>
 
   <div id="code" class="portion two">
   </div>
 
-  <div id="portion2" class="info inverted">
-    <h3>Code</h3>
-    <p>With many years experience ...., I've aquired a great level of expertise in various aspects of web development. The DOM is my canvas, and with CSS as utensils I create my art.</p>
+  <section id="portion2" class="info inverted">
+    <h3>Kode</h3>
+    <p>Jeg har lang erfaring med utvikling, og kan kode i mange forskjellige språk. Jeg kan utvikle alt fra enkle nettsider, til mer avanserte systemer som intranett og nettportaler. </p>
     <div class="button">
       <a href="#">GitHub</a>
     </div>
-  </div>
+  </section>
 
   <div class="portion three">
   </div>
 
-  <div id="portfolio" name="portfolio" class="info blue-bg">
+  <div id="portfolio" name="portfolio" class="info inverted">
     <h3>Prosjekt</h3>
 
-    <p class="thinner">Har du et prosjekt du ønsker hjelp med å ferdigstille? Trenger du noen som kan gjøre ideer om til virkelighet?
-      Jeg har lang erfaring med å designe og implemetere hjemmesider.</p>
+    <p class="thinner">Har du et prosjekt du ønsker hjelp med å ferdigstille? Trenger du noen som kan hjelpe deg gjøre ideer om til virkelighet?
+      Jeg har lang erfaring med å designe og implemetere hjemmesider. Ettersom jeg jobber freelance kan jeg gjøre jobben kjappere, bedre og billigere enn hos de store selskapene. Ta kontakt og fortell meg om ditt prosjekt!</p>
     <div class="button">
       <a href="#">Mine prosjekt</a>
     </div>
@@ -45,7 +46,7 @@
         <div class="container">
           <form>
             <div class="text-center">
-              <h3 class="pink-text mb-5"><strong>Ta kontakt</strong></h3>
+              <h2 class="mb-5"><strong>Ta kontakt</strong></h2>
             </div>
             <div class="md-form">
               <i class="fa fa-user prefix grey-text"></i>
@@ -71,7 +72,7 @@
         </div>
       </div>
       <video autoplay loop class="fillWidth">
-        <source src="{{asset('vid/Nature-Sunset.mp4')}}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        <source src="{{asset('vid/Bed-Phone.mp4')}}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
         <source src="{{asset('vid/Nature-Sunset.webm')}}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
       </video>
       <div class="poster hidden">

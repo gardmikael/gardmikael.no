@@ -1,18 +1,40 @@
 body
   font-family: 'Nunito Sans', sans-serif
-  background: #202020
   h1,h2,h3
     font-family: 'Teko', sans-serif
+  nav.navbar, .navbar-brand
+    font-family: 'Teko'
+    font-size: 1.3em
+    text-transform: uppercase
+  nav.navbar
+    li:hover a
+      filter: blur(2px)
+      color: #fff !important
+    &:hover
+      transition: all 1.2s ease
+      box-shadow: 0 0 40px #55f3e8
 #app
+  h2#hero-text
+    font-family: 'Fredericka the Great', cursive
+    user-select: none
+    font-size: 4em
+    padding: .5em 1em
+    margin: 0
+    text-align: left
+    position: absolute
+    bottom: 0
+    width: 100%
   .info
     color: $text-color
     padding: 4em 25%
     text-align: center
-    h3
-      font-size: 4em
     &.inverted
       color: #000
       background: #fff
+    h3
+      font-size: 4em
+    p
+      margin: 30px 0
   .overlay
     position: relative
     &::before
@@ -21,24 +43,27 @@ body
       top: 0
       left: 0
       width: 100%
-      height: 100%
+      height: calc(100% + 1px)
       display: block
       z-index: -10
-  .blue-bg
+  .overlay-bg
     &::before
-      background: rgb(14,100,108)
-      background: -moz-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
-      background: -webkit-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
-      background: linear-gradient(135deg,rgba(0,0,0,.9) 0%,rgba(95, 79, 0, 0.8) 66%)
+      background: rgb(0,0,0)
+      background: -moz-linear-gradient(-45deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.98) 72%)
+      background: -webkit-linear-gradient(-45deg,rgba(0,0,0,.9) 0%,rgba(22,47,63,.98) 72%)
+      background: linear-gradient(135deg,rgba(0,0,0,.9) 0%,rgba(0, 0, 0, 0.98) 66%)
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#194957',endColorstr='#162f3f',GradientType=1)
   #hero
     background-image: url(/../img/test.jpg)
     height: 100vh
   #about
-    background-image: url(/../img/coffee.jpg)
+    background-image: url(/../img/journey.jpg)
     background-size: cover
     background-attachment: fixed
     z-index: 1
+    p
+      max-width: 400px
+      margin: auto
   .portion
     background-position: 0px 0px
     background-attachment: fixed
@@ -49,20 +74,13 @@ body
       background-image: url(/../img/test3.jpeg)
       background-color: #202020
       background-repeat: no-repeat
+      margin-top: -3px
     &.three
       background-image: url(/../img/test4.jpg)
-    h2
-      font-family: 'Fredericka the Great', cursive
-      user-select: none
-      font-size: 4em
-      padding: .5em 1em
-      margin: 0
-      text-align: left
-      position: absolute
-      bottom: 0
-      width: 100%
+      height: 500px
   .button
     text-align: center
+    margin-top: 30px
     a
       display: inline-block
       border: 2px solid $brand-primary
@@ -78,24 +96,32 @@ body
       &:hover
         color: $brand-primary
         background: #edd553
+  #contact
+    form
+      padding: 50px 0
+      color: #fff
+      position: absolute
+      top: 50%
+      width: 50%
+      left: 50%
+      padding: 0
+      margin: 0
+      transform: translate(-50%, -50%)
+      margin-right: 3em
+      h2
+        font-size: 4em
+      input
+        padding: 0
+      input[type=text]:focus:not([readonly])+label, textarea.md-textarea:focus:not([readonly])+label
+        color: #cdb94b
+      input[type=text]:focus:not([readonly]), textarea.md-textarea:focus:not([readonly])
+        border-bottom: 1px solid #cdb94b
+        box-shadow: 0 0px 0 0 #cdb94b
   footer.footer
     color: $text-color
     background: #244058
     padding: 8px 0
     text-align: center
-  #toTop img
-    width: 50px
-    &:hover
-      cursor: pointer
-  nav img
-    z-index: 1000
-    height: 2.5em
-    position: absolute
-    left: 40px
-    top: 10px
-    transition: all 0.5s linear
-  .move
-    top: -60px
   nav span
     position: absolute
     right: 20px
@@ -139,7 +165,7 @@ body
   .filter
     z-index: 10
     position: absolute
-    background: rgba(0, 0, 0, 0.4)
+    background: rgba(0, 0, 0, 0.8)
     width: 100%
     height: 100%
   video

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">GM</a>
+  <a class="navbar-brand" href="#">GMF</a>
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems"
       aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -24,9 +24,11 @@
       <!-- Links -->
 
       <!-- Search form -->
+      <!-- Probably dont need it
       <form class="form-inline">
           <input class="form-control mr-sm-2" type="text" placeholder="Søk" aria-label="Search">
       </form>
+    -->
   </div>
   <!-- Collapsible content -->
 </nav>
