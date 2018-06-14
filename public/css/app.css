@@ -10676,6 +10676,25 @@ body nav.navbar:hover {
   width: 100%;
 }
 
+@media (max-width: 650px) {
+  #app h2#hero-text {
+    font-size: 2em;
+  }
+
+  #app .info {
+    padding: 2em 2%;
+  }
+
+  #app .info h3 {
+    font-size: 2.3em;
+  }
+
+  #app #contact form {
+    padding: 0 3em 0 0px;
+    width: 90%;
+  }
+}
+
 @media (max-width: 600px) {
   #app {
     margin-top: 56px;
