@@ -12,5 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('pages.index2');
+    return view('pages.index');
 });

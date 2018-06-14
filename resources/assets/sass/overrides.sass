@@ -1,10 +1,18 @@
 body
   font-family: 'Nunito Sans', sans-serif
-  background: #ffffff
+  background: #202020
   h1,h2,h3
     font-family: 'Teko', sans-serif
 #app
-  margin-top: 64px
+  .info
+    color: $text-color
+    padding: 4em 25%
+    text-align: center
+    h3
+      font-size: 4em
+    &.inverted
+      color: #000
+      background: #fff
   .overlay
     position: relative
     &::before
@@ -21,17 +29,22 @@ body
       background: rgb(14,100,108)
       background: -moz-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
       background: -webkit-linear-gradient(-45deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
-      background: linear-gradient(135deg,rgba(14,100,108,.9) 0%,rgba(22,47,63,.98) 72%)
+      background: linear-gradient(135deg,rgba(0,0,0,.9) 0%,rgba(95, 79, 0, 0.8) 66%)
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#194957',endColorstr='#162f3f',GradientType=1)
   #hero
     background-image: url(/../img/test.jpg)
+    height: 100vh
   #about
-    background-image: url(/../img/books.jpg)
+    background-image: url(/../img/coffee.jpg)
+    background-size: cover
+    background-attachment: fixed
+    z-index: 1
   .portion
     background-position: 0px 0px
     background-attachment: fixed
     background-size: cover
     min-height: calc(100vh - 64px)
+    backface-visibility: hidden
     &.two
       background-image: url(/../img/test3.jpeg)
       background-color: #202020
@@ -48,12 +61,6 @@ body
       position: absolute
       bottom: 0
       width: 100%
-  .info
-    color: $text-color
-    padding: 4em 25%
-    &.inverted
-      color: #000
-      background: #fff
   .button
     text-align: center
     a
